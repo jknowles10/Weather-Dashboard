@@ -6,16 +6,100 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   </head>
+
   <body>
   <section class="section">
     <div class="container">
       <h1 class="title">
         Weather Dashboard
       </h1>
-      <p class="subtitle">
+      
+      <h1>
         Enter City
-      </p>
+      </h1>
+      <input id="city-input" class="input is-rounded" type="text" placeholder="Enter City" />
     </div>
+
+    <div id="city-card" class="card">
+        <div class="card-content">
+          <div class="content">
+            CITY
+            High
+            Low
+          </div>
+        </div>
+      </div> 
+      
+      
   </section>
+
+  <section class="section">
+    <h1 class="title">Five-Day Forecast</h1>
+    <div class="columns"> 
+
+ <div class="column"> Day 1
+    <div id= "forecast-card" class="card">
+        <div class="card-content">
+          <div class="content">
+            High:
+            Low:
+            Humidity:
+          </div>
+        </div>
+    </div>
+</div>
+
+      <div class="column">Day 2
+      <div id="forecast-card" class="card">
+        <div class="card-content">
+          <div class="content">
+            High:
+            Low:
+            Humidity:
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="column"> Day 3
+    <div id="forecast-card" class="card">
+        <div class="card-content">
+          <div class="content">
+            High:
+            Low:
+            Humidity:
+          </div>
+        </div>
+      </div>
+    </div> 
+
+<div class="column">Day 4  
+    <div id="forecast-card" class="card">
+        <div class="card-content">
+          <div class="content">
+            High:
+            Low:
+            Humidity:
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="column">Day 5        
+   <div id="forecast-card" class="card">
+    <div class="card-content">
+        <div class="content">
+        High:
+        Low:
+        Humidity:
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+  </section>
+
+  <script src="script.js"></script>
   </body>
 </html>
