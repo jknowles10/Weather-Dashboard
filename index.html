@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Dashboard</title>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   </head>
 
@@ -26,7 +26,7 @@
     </div>
 
     <div class="column">
-        <div id="city-card" class="box" style="width:500px">
+        <div id="city-card" class="box" style="width:250px">
           <!-- <p class="title is-5">City</p> -->
         </div>
       </div>
@@ -38,55 +38,56 @@
     <h1 class="title">Five-Day Forecast</h1>
     <div class="columns"> 
 
- <div id="day1" class="column"> Day 1
-    <div id= "forecast-card1" class="card">
+      <!-- DAY 1 -->
+ <div id="date1" class="column">
+
+  <div id= "forecast-card1" class="box">
         <div class="card-content">
           <div class="content">
-            <!-- <p> Date: Temp: Humidity: Wind:  -->
+          <!-- <p> Date: Temp: Humidity: Wind:  -->
           </div>
         </div>
     </div>
 </div>
-
-      <div id="day2" class="column">Day 2
-      <div id="forecast-card2" class="card">
+        <!-- DAY 2 -->
+      <div id="date2" class="column">
+      <div id="forecast-card2" class="box">
         <div class="card-content">
           <div class="content">
-            Temp:
-            Humidity:
+            
           </div>
         </div>
       </div>
     </div>
 
-<div id="day3" class="column"> Day 3
-    <div id="forecast-card3" class="card">
+    <!-- DAY 3 -->
+<div id="date3" class="column">
+    <div id="forecast-card3" class="box">
         <div class="card-content">
           <div class="content">
-            Temp:
-            Humidity:
+            
           </div>
         </div>
       </div>
     </div> 
 
-<div id="day4" class="column">Day 4  
-    <div id="forecast-card4" class="card">
+    <!-- DAY 4 -->
+<div id="date4" class="column">
+    <div id="forecast-card4" class="box">
         <div class="card-content">
           <div class="content">
-            Temp:
-            Humidity:
+        
           </div>
         </div>
       </div>
     </div>
 
-<div id="day5" class="column">Day 5        
-   <div id="forecast-card5" class="card">
+    <!-- DAY 5 -->
+<div id="date5" class="column">     
+   <div id="forecast-card5" class="box">
     <div class="card-content">
         <div class="content">
-        Temp:
-        Humidity:
+        
     </div>
   </div>
 </div>
