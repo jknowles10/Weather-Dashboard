@@ -15,6 +15,20 @@ const dateCard4 = document.getElementById("date4");
 const dateCard5 = document.getElementById("date5");
 
 
+//local storage
+const searchHistory = document.getElementById("recent-searches");
+let searchedEntry = JSON.parse(localStorage.getItem("searches"));
+//let currentCity = searchedEntry[0];
+//console.log(currentCity);
+
+if (searchedEntry === null) {
+    searchedEntry =[]
+} else {
+  // loadCurrent();
+   populateRecent();
+};
+
+
 let city;
 let date; 
 let lat;
@@ -30,8 +44,17 @@ const queryURL= `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&
 
 const formSubmitHandler = function (event) {
     event.preventDefault();
-     city = cityInput.value.trim();
+    city = cityInput.value.trim();
     console.log(city);
+    searchedEntry.unshift(city);
+
+    localStorage.setItem("searches", JSON.stringify(searchedEntry));
+    console.log(searchedEntry);
+
+    nextSearch(city); }
+
+const nextSearch = function() {
+      
 
 
     let queryURL= `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
@@ -42,8 +65,8 @@ fetch(queryURL)
     })
     .then(function (data) {
         console.log(data);
-        console.log("lat " + data[0].lat);
-        console.log("lon " + data[0].lon);
+        console.log("lat" + data[0].lat);
+        console.log("lon" + data[0].lon);
 
         let lat = data[0].lat;
         let lon = data[0].lon;
@@ -172,5 +195,28 @@ const day5Icon = data.list[39].weather[0].icon;
     
  });
 }); }
+
+
+//search.addEventListener("click", formSubmitHandler(event.target)); 
+
+
+function populateRecent() {
+    const maxElements = Math.min(history.length, 6);
+    
+        for (let i=0; i <6; i++) {
+    console.log(searchedEntry[i]);
+    
+    let search = document.createElement("button");
+    
+    search.innerHTML = `<button class="tag">${searchedEntry[i]}</button>`;
+    searchHistory.appendChild(search);
+}};
+
+searchHistory.addEventListener("click", function(event) {
+    city = event.target.textContent;
+    nextSearch(city);
+    removeChild("id", 'date1,date2, date3,date4, date5');
+});
+
 
 cityFormEl.addEventListener('submit', formSubmitHandler);
