@@ -37,7 +37,7 @@ let cityName
 let state; 
 const APIKey = "13d0956ce959ce03bfde920b34984e08";
 
-const queryURL= `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
+const queryURL= `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
 
 
 
@@ -57,7 +57,7 @@ const nextSearch = function() {
       
 
 
-    let queryURL= `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
+    let queryURL= `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`;
 
 fetch(queryURL)
     .then(function (response) {
