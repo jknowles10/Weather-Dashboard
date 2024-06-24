@@ -126,11 +126,11 @@ const day5Icon = data.list[39].weather[0].icon;
     cityDateJs1 = dayjs(formatCityDate1).format('ddd, MM/DD/YY');                   
                                  
 
-    dateCard1.insertAdjacentHTML ('afterbegin', `<p class=" title is-5"> ${cityDateJs1}<p>`);
-    day1.innerHTML = `<p>Temp: ${day1CityTemp} °F</p> 
-                      <p>Humidity: ${day1CityHumidity}% </p>
-                      <p>Wind: ${day1CityWind} MPH</p>
-                      <image src="https://openweathermap.org/img/wn/${day1Icon}@2x.png"></image>`;
+    dateCard1.innerHTML = `<div id="date1" class="column"><p class="title is-5">${cityDateJs1}</p>
+    <div id= "forecast-card1" class="box"><p>Temp: ${day1CityTemp} °F</p> 
+    <p>Humidity: ${day1CityHumidity}% </p>
+    <p>Wind: ${day1CityWind} MPH</p>
+    <image src="https://openweathermap.org/img/wn/${day1Icon}@2x.png"></image>`
 
     const day2CityTemp = Math.round(data.list[15].main.temp);
     const day2CityHumidity = data.list[15].main.humidity;
@@ -139,11 +139,11 @@ const day5Icon = data.list[39].weather[0].icon;
     formatCityDate2 = day2Date.slice(0,10);
     cityDateJs2 = dayjs(formatCityDate2).format('ddd, MM/DD/YY');        
 
-    dateCard2.insertAdjacentHTML ('afterbegin', `<p class=" title is-5"> ${cityDateJs2}<p>`);
-    day2.innerHTML = `<p>Temp: ${day2CityTemp}°F</p
-                      <p>Humidity: ${day2CityHumidity}% </p>
-                      <p>Wind: ${day2CityWind} MPH</p>
-                      <image src="https://openweathermap.org/img/wn/${day2Icon}@2x.png"></image>`;
+    dateCard2.innerHTML = `<div id="date2" class="column"><p class="title is-5">${cityDateJs2}</p>
+    <div id= "forecast-card2" class="box"><p>Temp: ${day2CityTemp} °F</p> 
+    <p>Humidity: ${day1CityHumidity}% </p>
+    <p>Wind: ${day2CityWind} MPH</p>
+    <image src="https://openweathermap.org/img/wn/${day2Icon}@2x.png"></image>`
 
                 
 
@@ -154,11 +154,11 @@ const day5Icon = data.list[39].weather[0].icon;
     formatCityDate3 = day3Date.slice(0,10);
     cityDateJs3 = dayjs(formatCityDate3).format('ddd, MM/DD/YY');  
     
-    dateCard3.insertAdjacentHTML ('afterbegin', `<p class=" title is-5"> ${cityDateJs3}<p>`);
-    day3.innerHTML = `<p>Temp: ${day3CityTemp}°F</p>
-                      <p>Humidity: ${day3CityHumidity}%</p>
-                      <p>Wind: ${day3CityWind} MPH</p>
-                      <image src="https://openweathermap.org/img/wn/${day3Icon}@2x.png"></image>`;
+    dateCard3.innerHTML = `<div id="date3" class="column"><p class="title is-5">${cityDateJs3}</p>
+    <div id= "forecast-card3" class="box"><p>Temp: ${day3CityTemp} °F</p> 
+    <p>Humidity: ${day3CityHumidity}% </p>
+    <p>Wind: ${day3CityWind} MPH</p>
+    <image src="https://openweathermap.org/img/wn/${day3Icon}@2x.png"></image>`
 
     const day4CityTemp = Math.round(data.list[31].main.temp);
     const day4CityHumidity = data.list[31].main.humidity;
@@ -167,11 +167,11 @@ const day5Icon = data.list[39].weather[0].icon;
     formatCityDate4 = day4Date.slice(0,10);
     cityDateJs4 = dayjs(formatCityDate4).format('ddd, MM/DD/YY'); 
 
-    dateCard4.insertAdjacentHTML ('afterbegin', `<p class=" title is-5"> ${cityDateJs4}<p>`);    
-    day4.innerHTML = `<p>Temp: ${day4CityTemp}°F</p>
-                      <p>Humidity: ${day4CityHumidity}%</p>
-                      <p>Wind: ${day4CityWind} MPH</p>
-                      <image src="https://openweathermap.org/img/wn/${day4Icon}@2x.png"></image>`;  
+    dateCard4.innerHTML = `<div id="date4" class="column"><p class="title is-5">${cityDateJs4}</p>
+    <div id= "forecast-card4" class="box"><p>Temp: ${day4CityTemp} °F</p> 
+    <p>Humidity: ${day4CityHumidity}% </p>
+    <p>Wind: ${day4CityWind} MPH</p>
+    <image src="https://openweathermap.org/img/wn/${day4Icon}@2x.png"></image>`
 
     const day5CityTemp = Math.round(data.list[39].main.temp);
     const day5CityHumidity = data.list[39].main.humidity;
@@ -180,11 +180,11 @@ const day5Icon = data.list[39].weather[0].icon;
     formatCityDate5 = day5Date.slice(0,10);
     cityDateJs5 = dayjs(formatCityDate5).format('ddd, MM/DD/YY'); 
 
-    dateCard5.insertAdjacentHTML ('afterbegin', `<p class=" title is-5"> ${cityDateJs5}<p>`);
-    day5.innerHTML = `<p>Temp: ${day5CityTemp}°F</p>
-                      <p>Humidity: ${day5CityHumidity}% </p>
-                      <p>Wind: ${day5CityWind} MPH </p>
-                      <image src="https://openweathermap.org/img/wn/${day5Icon}@2x.png"></image>`; 
+    dateCard5.innerHTML = `<div id="date5" class="column"><p class="title is-5">${cityDateJs5}</p>
+    <div id= "forecast-card5" class="box"><p>Temp: ${day5CityTemp} °F</p> 
+    <p>Humidity: ${day5CityHumidity}% </p>
+    <p>Wind: ${day5CityWind} MPH</p>
+    <image src="https://openweathermap.org/img/wn/${day5Icon}@2x.png"></image>`
 
     
      };
@@ -215,7 +215,7 @@ function populateRecent() {
 searchHistory.addEventListener("click", function(event) {
     city = event.target.textContent;
     nextSearch(city);
-    removeChild("id", 'date1,date2, date3,date4, date5');
+  //  removeChild("id", 'date1,date2, date3,date4, date5');
 });
 
 

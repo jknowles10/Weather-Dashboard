@@ -20,7 +20,7 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 ## Usage
-Please visit the following link to view the website:
+Please visit the following link to view the website: https://jknowles10.github.io/Weather-Dashboard/
 
 Please visit the following link to view the repository: https://github.com/jknowles10/Weather-Dashboard
 
@@ -35,3 +35,4 @@ MIT License
 ## Credits
 CSS Framework:https://bulma.io/
 API: https://openweathermap.org/api
+Daniel Dunnemann helped me with debugging my date feature
